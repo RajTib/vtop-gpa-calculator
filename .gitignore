@@ -1,0 +1,31 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if you add build tooling later)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE junk
+.vscode/
+.idea/
+*.swp
+
+# Local environment files (if any)
+.env
+.env.local
+
+# Dist/build folders (for future dashboard builds)
+dist/
+build/
+
+# Temp files
+*.tmp
+*.bak
+
+# Mac trash
+._*
