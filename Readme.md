@@ -47,9 +47,9 @@ vtop-gpa-calculator/<br>
 ├── main.js<br>
 ├── assets/<br>
 ├── dashboard/<br>
-├── index.html<br>
-├── dashboard.css<br>
-├── dashboard.js<br>
+|    ├── index.html<br>
+|    ├── dashboard.css<br>
+|    ├── dashboard.js<br>
 └── README.md<br>
 
 
