@@ -7,7 +7,6 @@
 ![Version](https://img.shields.io/badge/Version-1.0-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
----
 
 ## ✨ Overview
 
@@ -21,7 +20,6 @@ This project converts your **raw VTOP timetable text** (from *Sl.No* → last �
 
 **Quick:** paste → parse → pick grades → get GPA.
 
----
 
 ## 🚀 Features
 
@@ -38,11 +36,9 @@ This project converts your **raw VTOP timetable text** (from *Sl.No* → last �
 - Responsive and readable on mobile/desktop
 
 ### 🧮 GPA Engine
-- Grade dropdown (O, A+, A, B+, B, C, F)  
+- Grade dropdown (S, A, B, C, D, E, F)  
 - Weighted GPA calculation  
 - Instant recalculation on change
-
----
 
 ## 📁 Project Structure
 vtop-gpa-calculator/<br>
@@ -56,4 +52,35 @@ vtop-gpa-calculator/<br>
 ├── dashboard.js<br>
 └── README.md<br>
 
----
+
+## ⚙️ How it works
+1. Copy the timetable text from VTOP (from S.No down to Registered and Approved).
+2. Paste it into the tool textarea.
+3. The parser extracts name, credit, and category for each course.
+4. NGCR items are excluded from GPA computation.
+5. Results are grouped by credit and the GPA UI is generated automatically.
+
+
+
+## 🛠 Tech Stack
+- HTML5, CSS3
+- Vanilla JavaScript (no frameworks)
+- Deploy via GitHub Pages
+  
+
+## 🧾 Local Setup
+
+git clone https://github.com/RajTib/vtop-gpa-calculator.git<br>
+cd vtop-gpa-calculator<br>
+Open index.html in your browser
+
+## 📜 License
+This project is released under the MIT License.
+
+
+## ❤️ Support
+If this helps you, a ⭐ on the repo would be appreciated.
+
+
+## ✍️ Author
+Raj — a VITian building tools for VITians.
