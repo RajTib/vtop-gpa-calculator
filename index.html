@@ -9,31 +9,32 @@
 </head>
 <body>
 
-<div class="container">
+<div class="page-wrapper">
+    <div class="container">
 
-    <h1 class="title">VTOP GPA Calculator</h1>
-    <p class="subtitle">Paste your entire VTOP timetable and let the magic happen ✨</p>
+        <h1 class="title">VTOP GPA Calculator</h1>
+        <p class="subtitle">Paste your entire VTOP timetable and let the magic happen ✨</p>
 
-    <div class="card">
-        <h2>1 — Paste Timetable Text</h2>
-        <textarea id="rawInput" placeholder="Paste everything from S.No … to the last Registered and Approved"></textarea>
-        <button id="parseBtn" class="btn primary">Extract Subjects</button>
+        <div class="card">
+            <h2>1 — Paste Timetable Text</h2>
+            <textarea id="rawInput" placeholder="Paste everything from S.No … to the last Registered and Approved"></textarea>
+            <button id="parseBtn" class="btn primary">Extract Subjects</button>
+        </div>
+
+        <div class="card" id="subjectsCard">
+            <h2>2 — Verify Extracted Courses</h2>
+            <div id="subjects"></div>
+        </div>
+    
+        <div class="card">
+            <h2>3 — Enter Your Grades</h2>
+            <div id="gpa-section"></div>
+        </div>
+
+        <button id="calcGPA" class="btn big">Calculate GPA</button>
+
+        <div id="gpaOutput" class="result"></div>
     </div>
-
-    <div class="card" id="subjectsCard">
-        <h2>2 — Verify Extracted Courses</h2>
-        <div id="subjects"></div>
-    </div>
- 
-    <div class="card">
-        <h2>3 — Enter Your Grades</h2>
-        <div id="gpa-section"></div>
-    </div>
-
-    <button id="calcGPA" class="btn big">Calculate GPA</button>
-
-    <div id="gpaOutput" class="result"></div>
-
 </div>
 
 <footer>
