@@ -47,13 +47,13 @@ This project converts your **raw VTOP timetable text** (from *Sl.No* → last �
 ## 📁 Project Structure
 vtop-gpa-calculator/<br>
 ├── index.html<br>
-├── styles.css<br>      
-├── main.js<br>      
+├── styles.css<br>  
+├── main.js<br>   
 ├── assets/<br>         
-├── dashboard/<br>         
-│   ├── index.html<br>
-│   ├── dashboard.css<br>
-│   └── dashboard.js<br>
+├── dashboard/<br>
+├── index.html<br>
+├── dashboard.css<br>
+├── dashboard.js<br>
 └── README.md<br>
 
 ---
