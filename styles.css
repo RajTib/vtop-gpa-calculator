@@ -132,3 +132,11 @@ textarea {
     text-align: center;
     font-weight: bold;
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+    font-size: 14px;
+    margin-top: 40px;
+}
