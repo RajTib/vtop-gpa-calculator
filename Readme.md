@@ -46,6 +46,7 @@ This project converts your **raw VTOP timetable text** (from *Sl.No* → last �
 
 ## 📁 Project Structure
 
+```plaintext
 vtop-gpa-calculator/
 │
 ├── index.html          # Main GPA page (MVP)
