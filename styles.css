@@ -1,0 +1,134 @@
+/* Center the whole app */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #f1f5f9);
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 750px;    /* ← THIS fixes your giant full-screen stretch */
+}
+
+
+/* Headings ------------------------------------------------------------*/
+.title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+/* Card ---------------------------------------------------------------*/
+.card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+/* Textarea --------------------------------------------------------------*/
+textarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    background: rgba(255,255,255,0.9);
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* Buttons --------------------------------------------------------------*/
+.btn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.15s ease;
+    margin-top: 12px;
+}
+
+.btn.primary {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #4338ca;
+}
+
+.btn.big {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    font-size: 1.1rem;
+    padding: 14px;
+}
+
+.btn.big:hover {
+    background: #1d4ed8;
+}
+
+/* Extracted Subjects --------------------------------------------------*/
+.subject-row {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.7);
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+/* GPA Rows -------------------------------------------------------------*/
+.gpa-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.gpa-row input {
+    flex: 2;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: white;
+}
+
+.gpa-row input[readonly] {
+    opacity: 0.8;
+}
+
+.gpa-row select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+}
+
+/* Result ------------------------------------------------------------*/
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
