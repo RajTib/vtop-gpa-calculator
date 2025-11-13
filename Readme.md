@@ -1,145 +1,63 @@
-VTOP GPA Calculator
+# 🌌 VTOP GPA Calculator
 
-A smart, auto-parsing GPA calculator for VIT students.
+> **Auto GPA engine for VIT students** — paste your VTOP timetable raw text and get an instant, beautiful GPA calculator.  
+> No manual entry. No hunting credits. No suffering.
 
-✨ Overview
+![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
+![Version](https://img.shields.io/badge/Version-1.0-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-Paste your entire VTOP timetable raw text, and the tool automatically:
+---
 
-Extracts course names
+## ✨ Overview
 
-Removes course codes
+This project converts your **raw VTOP timetable text** (from *Sl.No* → last “Registered and Approved”) into:
 
-Reads credits from LTPC
+- Clean subject names (course codes removed)  
+- Extracted credit values (C from L T P J C)  
+- Filtered non-graded courses (NGCR excluded from GPA)  
+- Sorted & grouped subjects by credit  
+- A neat GPA calculator UI with grade dropdowns and instant weighted GPA
 
-Filters NGCR
+**Quick:** paste → parse → pick grades → get GPA.
 
-Sorts by credit weight
+---
 
-Builds a clean, modern GPA calculator UI
+## 🚀 Features
 
-No manual entry.
-No confusion.
-No suffering.
+### 📄 Smart Parsing
+- Detects course blocks and course codes  
+- Extracts credit (last token of LTPC line)  
+- Handles decimal credits (e.g. `1.5`)  
+- Detects embedded courses (1 + 2 credit pairs)  
+- Skips explicit **Non-graded** entries
 
-🚀 Features
-📄 Smart Parsing
+### 🎨 Modern UI
+- Glassy card layout  
+- Credit badges and grouped sections  
+- Responsive and readable on mobile/desktop
 
-Detects course blocks
+### 🧮 GPA Engine
+- Grade dropdown (O, A+, A, B+, B, C, F)  
+- Weighted GPA calculation  
+- Instant recalculation on change
 
-Extracts credits from LTPC
+---
 
-Handles decimal credits
+## 📁 Project Structure
 
-Handles embedded (1+2 credit) courses
-
-Skips NGCR
-
-🎨 Modern UI
-
-Clean card layout
-
-Credit badges
-
-Grouped subjects
-
-Smooth grid spacing
-
-🧮 GPA Engine
-
-Grade dropdowns
-
-Weighted GPA calculation
-
-Real-time updating
-
-📁 Folder Structure
+```plaintext
 vtop-gpa-calculator/
 │
-├── index.html        # Main GPA page
-├── styles.css        # UI styling
-├── main.js           # Parser + GPA logic
+├── index.html          # Main GPA page (MVP)
+├── styles.css          # Styling (glass UI)
+├── main.js             # Parser + GPA logic
 │
-├── assets/           # (optional) images/icons
+├── assets/             # (optional: logos, icons, images)
 │
-├── dashboard/        # Future expansion
+├── dashboard/          # Future: full student dashboard (empty for now)
 │   ├── index.html
 │   ├── dashboard.css
 │   └── dashboard.js
 │
 └── README.md
-
-🧠 How It Works
-
-You copy raw timetable text from VTOP
-
-The parser reads:
-
-Course name
-
-Credits
-
-Category
-
-NGCR courses are removed from GPA
-
-Courses are sorted by decreasing credits
-
-GPA UI is generated automatically
-
-🧭 Roadmap
-✔ Phase 1 — GPA Tool (Done)
-
-Parser
-
-UI
-
-Sorting
-
-GPA logic
-
-🔜 Phase 2 — Dashboard
-
-Greeting screen
-
-Semester initializer
-
-Save subjects locally
-
-Past semesters
-
-CGPA calculator
-
-🔜 Phase 3 — Marks Tracker
-
-CAT/Quiz marks
-
-Weightage calculator
-
-Required marks predictor
-
-🔜 Phase 4 — Insights
-
-Difficulty estimation
-
-Trend graphs
-
-Suggestions
-
-🛠 Tech Stack
-
-HTML
-
-CSS
-
-Vanilla JS
-
-GitHub Pages
-
-📜 License
-
-MIT License.
-
-⭐ Support
-
-If this project helped you, consider starring the repo.
