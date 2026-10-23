@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VTOP GPA Calculator</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -15,25 +16,80 @@
         <h1 class="title">VTOP GPA Calculator</h1>
         <p class="subtitle">Paste your entire VTOP timetable and let the magic happen ✨</p>
 
-        <div class="card">
+        <noscript><div class="banner warn">This calculator needs JavaScript to run.</div></noscript>
+        <div id="banners"></div>
+
+        <div class="card" id="pasteCard">
             <h2>1 — Paste Timetable Text</h2>
-            <textarea id="rawInput" placeholder="Paste everything from S.No … to the last Registered and Approved"></textarea>
+            <textarea id="rawInput" aria-label="VTOP timetable text" placeholder="Paste everything from S.No … to the last Registered and Approved"></textarea>
             <button id="parseBtn" class="btn primary">Extract Subjects</button>
+            <div id="parseMessages" class="messages" aria-live="polite"></div>
         </div>
 
-        <div class="card" id="subjectsCard">
+        <div class="card" id="subjectsCard" hidden>
             <h2>2 — Verify Extracted Courses</h2>
+            <p class="hint">Fix anything that looks wrong before saving. Nothing is saved until you press the save button.</p>
+            <div id="reviewNotes" class="messages"></div>
             <div id="subjects"></div>
-        </div>
-    
-        <div class="card">
-            <h2>3 — Enter Your Grades</h2>
-            <div id="gpa-section"></div>
+            <div class="review-target">
+                <label>Save into
+                    <select id="targetSemester"></select>
+                </label>
+                <label>If it is new, treat it as
+                    <select id="targetStatus">
+                        <option value="ongoing">Ongoing (predicted grades)</option>
+                        <option value="completed">Completed (actual grades)</option>
+                    </select>
+                </label>
+            </div>
+            <div class="button-row">
+                <button id="saveDraftBtn" class="btn primary">Save courses</button>
+                <button id="discardDraftBtn" class="btn ghost">Discard</button>
+            </div>
         </div>
 
-        <button id="calcGPA" class="btn big">Calculate GPA</button>
+        <div class="card" id="historyCard">
+            <h2>Past semesters — import grade history</h2>
+            <p class="hint">Optional. Copy your whole VTOP Effective Grades table, including its header row, and paste it here to fill in your completed semesters. You review everything before anything is saved.</p>
+            <textarea id="historyInput" aria-label="VTOP grade history table" placeholder="Paste the grade table, starting from the header row (Sl.No. · Course Code · Course Title · … · Grade · Exam Month …)"></textarea>
+            <button id="historyParseBtn" class="btn primary">Read grade history</button>
+            <div id="historyMessages" class="messages" aria-live="polite"></div>
+        </div>
 
-        <div id="gpaOutput" class="result"></div>
+        <div class="card" id="historyReviewCard" hidden>
+            <h2>Review grade history</h2>
+            <p class="hint">Nothing is saved until you press Import. Semester numbers come from the exam month: November is an odd semester and April an even one.</p>
+            <div id="historyReview"></div>
+            <div class="button-row">
+                <button id="historyImportBtn" class="btn primary">Import</button>
+                <button id="historyDiscardBtn" class="btn ghost">Discard</button>
+            </div>
+        </div>
+
+        <section id="dashboard" aria-label="Academic overview">
+            <div id="tiles" class="tiles"></div>
+            <nav aria-label="Semesters">
+                <ul id="semNav" class="sem-nav"></ul>
+            </nav>
+        </section>
+
+        <div class="card" id="semesterCard">
+            <h2>3 — Semester &amp; Grades</h2>
+            <div id="semesterBody"></div>
+        </div>
+
+        <div class="card" id="dataCard">
+            <h2>Your data</h2>
+            <p class="hint">Everything is stored only in this browser. Export a backup if you switch devices or clear your browser data.</p>
+            <div class="button-row">
+                <button id="exportBtn" class="btn ghost">Export backup</button>
+                <label class="btn ghost file-btn">Import backup
+                    <input type="file" id="importFile" accept="application/json,.json">
+                </label>
+                <button id="clearBtn" class="btn danger">Clear all data</button>
+            </div>
+            <div id="dataMessages" class="messages" aria-live="polite"></div>
+        </div>
     </div>
 </div>
 
@@ -41,6 +97,11 @@
         © 2025 Raj — MIT Licensed
 </footer>
 
+<script src="js/parser.js"></script>
+<script src="js/gpa.js"></script>
+<script src="js/history.js"></script>
+<script src="js/model.js"></script>
+<script src="js/storage.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

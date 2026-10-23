@@ -1,0 +1,10 @@
+SYNTHETIC FIXTURE: invented courses, not a real student's data and not verified against real VTOP output.
+Effective Grades
+Sl.No.	Course Code	Course Title	Course Type	Credits	Grade	Exam Month	Result Declared	Course Distribution	Detail View
+1	BCSE202L	Data Structures and Algorithms	Theory Only	3	A	Apr-2025	20-May-2025	PC	View
+2	BMAT201L	Complex Variables and Linear Algebra	Embedded Theory and Lab	4	B	Nov-2024	30-Dec-2024	UC	View
+3	BCSE202P	Data Structures and Algorithms Lab	Lab Only	1.5	S	Apr-2025	20-May-2025	PC	View
+4	BHUM101L	Ethics and Values	Theory Only	2	P	Nov-2024	30-Dec-2024	NGCR	View
+5	BSTS301P	Advanced Competitive Coding - I	Soft Skill	1	A	Nov-2025		UE	View
+6	BCSE399J	Project - Phase 1	Project	0.5	S	Apr-2026		PE	View
+Showing 1 to 6 of 6 entries
